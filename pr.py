@@ -1,4 +1,3 @@
-#!"c:\python3.6.2\python.exe"
 import tweepy
 import time
 import io
@@ -11,8 +10,7 @@ access_token_secret =''
 auth=tweepy.OAuthHandler(consumer_key,consumer_secret)
 auth.set_access_token(access_token,access_token_secret)
 api=tweepy.API(auth)
-print("authenticated")
-x= api.trends_place() #WOEID
+x= api.trends_place(23424848) #WOEID
 try:
     to_unicode  =unicode
 except NameError:
